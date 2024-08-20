@@ -69,8 +69,8 @@ const Footer = () => {
           </ul>
         </div>
       </section>
-      <section className="flex justify-between items-center px-[20px] lg:px-[144px] h-[48px] bg-[var(--background)] text-[10px] lg:text-[12px]">
-        <div className="flex items-center gap-2 lg:gap-[24px] font-poppins underline">
+      <section className="flex justify-between items-center px-[20px] md:px-[60px] lg:px-[144px] h-[48px] bg-[var(--background)] text-[10px] md:text-[12px]">
+        <div className="flex items-center gap-2 md:gap-[24px] font-poppins underline">
           <a className="cursor-pointer">Privacy</a>
           <a className="cursor-pointer">Cookieverklaring</a>
           <a className="cursor-pointer">Disclaimer</a>
