@@ -9,7 +9,7 @@ interface Props {
 }
 const Card = ({ image, title, description, subText }: Props) => {
   return (
-    <div className="bg-white overflow-hidden w-[288px] h-[336px] rounded-2xl relative">
+    <div className="bg-white overflow-hidden min-w-[288px] w-[288px] h-[336px] rounded-2xl relative">
       <div className="h-[160px] overflow-hidden">
         <img src={image} alt={title} />
       </div>

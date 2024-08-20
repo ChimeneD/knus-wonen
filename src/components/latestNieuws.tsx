@@ -26,11 +26,11 @@ const LatestNieuws = () => {
   ];
   return (
     <div className="bg-[var(--background-alt)] h-[572px] flex flex-col justify-center px-6 items-center">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 w-full">
         <p className="text-[var(--primary)] text-[32px] leading-[39.04px] font-overlock font-medium">
           Laatste nieuws
         </p>
-        <div className="flex gap-6 items-center">
+        <div className="flex gap-6 items-center w-full overflow-x-auto py-4">
           {items.map((item, index) => (
             <Card {...item} key={index} />
           ))}
