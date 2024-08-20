@@ -1,18 +1,11 @@
-import { placementEnum } from "@/types/enums";
-
 interface Props {
-  placement?: placementEnum;
+  children?: React.ReactNode;
 }
 
-const CTA = ({ placement }: Props) => {
+const CTA = ({ children }: Props) => {
   return (
-    <div
-      className={`flex ${
-        placement === placementEnum.left ? "flex-row" : "flex-row-reverse"
-      }`}
-    >
-      <div>hey</div>
-      <div>yello</div>
+    <div className="h-[500px] overflow-hidden flex items-center justify-center w-full px-[248px]">
+      {children}
     </div>
   );
 };
