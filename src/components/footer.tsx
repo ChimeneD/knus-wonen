@@ -48,7 +48,7 @@ const Footer = () => {
             <h1 className="font-bold font-overlock text-[20px]">
               {item.heading}
             </h1>
-            <ul className="font-poppins text-[16px] flex flex-col gap-2 lg:gap-0 items-center lg:items-start my-4 lg:my-0">
+            <ul className="font-poppins text-[16px] flex flex-col gap-2 lg:gap-0 items-center text-center lg:text-start lg:items-start my-4 lg:my-0">
               {item.lists.map((list) => (
                 <li key={list.label}>{list.label}</li>
               ))}
