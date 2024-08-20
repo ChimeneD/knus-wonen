@@ -50,8 +50,8 @@ const Hero = () => {
         alt="hero svg"
         className="w-full h-full object-cover absolute z-0"
       />
-      <div className="flex flex-col justify-end h-full items-center px-2">
-        <article className="z-20 py-2 overflow-x-auto w-full md:w-auto gap-4 flex flex-col">
+      <div className="flex flex-col justify-end h-full items-center">
+        <article className="z-20 py-2 overflow-x-auto w-full md:w-auto gap-4 flex flex-col px-2 backdrop-blur-lg bg-white/30 md:bg-transparent md:backdrop-blur-none">
           <p className="text-[var(--primary)] md:text-white text-lg md:text-[24px] leading-[36px] font-poppins ">
             Waarmee kunnen we je helpen?
           </p>
