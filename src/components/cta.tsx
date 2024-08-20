@@ -4,7 +4,7 @@ interface Props {
 
 const CTA = ({ children }: Props) => {
   return (
-    <div className="h-full lg:h-[500px] overflow-hidden flex items-center justify-center w-full px-4 lg:px-[248px]">
+    <div className="h-full lg:h-[500px] overflow-hidden flex items-center justify-center w-full px-4 lg:px-[144px] 2xl:px-[248px]">
       {children}
     </div>
   );
