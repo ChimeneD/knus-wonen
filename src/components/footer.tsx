@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
         ))}
         <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start gap-2">
-          <h1 className="font-bold font-overlock text-[20px]">
+          <h1 className="font-bold font-overlock text-[20px] text-center lg:text-start">
             Volg ons op onze sociale kanalen
           </h1>
           <ul className="flex gap-2 items-center lg:items-start">
