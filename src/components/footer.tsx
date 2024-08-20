@@ -45,10 +45,10 @@ const Footer = () => {
             key={item.heading}
             className="flex flex-col items-center lg:items-start justify-start gap-2 max-w-[288px]"
           >
-            <h1 className="font-bold font-overlock text-[20px]">
+            <h1 className="font-bold font-overlock text-[16px] lg:text-[20px]">
               {item.heading}
             </h1>
-            <ul className="font-poppins text-[16px] flex flex-col gap-2 lg:gap-0 items-center text-center lg:text-start lg:items-start my-4 lg:my-0">
+            <ul className="font-poppins text-[12px] lg:text-[16px] flex flex-col gap-2 lg:gap-0 items-center text-center lg:text-start lg:items-start my-4 lg:my-0">
               {item.lists.map((list) => (
                 <li key={list.label}>{list.label}</li>
               ))}
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
         ))}
         <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start gap-2">
-          <h1 className="font-bold font-overlock text-[20px] text-center lg:text-start">
+          <h1 className="font-bold font-overlock text-[16px] lg:text-[20px] text-center lg:text-start">
             Volg ons op onze sociale kanalen
           </h1>
           <ul className="flex gap-2 items-center lg:items-start">
@@ -69,8 +69,8 @@ const Footer = () => {
           </ul>
         </div>
       </section>
-      <section className="flex justify-between items-center px-[144px] h-[48px] bg-[var(--background)] text-[12px]">
-        <div className="flex items-center gap-[24px] font-poppins underline">
+      <section className="flex justify-between items-center px-[20px] lg:px-[144px] h-[48px] bg-[var(--background)] text-[10px] lg:text-[12px]">
+        <div className="flex items-center gap-2 lg:gap-[24px] font-poppins underline">
           <a className="cursor-pointer">Privacy</a>
           <a className="cursor-pointer">Cookieverklaring</a>
           <a className="cursor-pointer">Disclaimer</a>

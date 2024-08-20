@@ -70,13 +70,13 @@ const NavBar = () => {
           />
         </div>
       </div>
-      <div className="md:hidden absolute top-[80px] left-0 right-0 w-full transition-all duration-[var(--duration)]">
+      <div className="z-20 md:hidden absolute top-[80px] left-0 right-0 w-full transition-all duration-[var(--duration)]">
         <ul
           className={`${
             open
-              ? "flex flex-col gap-[12px] text-[var(--primary)] font-bold font-poppins items-center bg-[var(--background)] z-10"
-              : "hidden"
-          }`}
+              ? "h-[30vh] gap-[12px] text-[var(--primary)] py-[12px] "
+              : "h-[0px]"
+          } flex flex-col font-bold font-poppins justify-center items-center bg-[var(--background)] transition-all duration-[var(--duration)] overflow-hidden`}
         >
           {menu.map((item) => (
             <li
