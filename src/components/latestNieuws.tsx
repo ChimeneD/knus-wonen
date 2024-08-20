@@ -26,7 +26,7 @@ const LatestNieuws = () => {
   ];
   return (
     <div className="bg-[var(--background-alt)] h-[572px] flex flex-col justify-center px-6 items-center">
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full lg:w-max lg:max-w-[70vw]">
         <p className="text-[var(--primary)] text-[32px] leading-[39.04px] font-overlock font-medium">
           Laatste nieuws
         </p>
