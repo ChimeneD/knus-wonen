@@ -28,7 +28,7 @@ const Hero = () => {
     },
   ];
   return (
-    <div className="w-[100vw] h-[480px] md:h-[560px] lg:h-[700px] relative overflow-hidden">
+    <div className="w-[100vw] h-[480px] md:h-[560px] relative overflow-hidden">
       {/* <div className="w-[100vw] h-[560px] relative bg-[url('/svg/hero.svg')] bg-no-repeat lg:bg-cover overflow-hidden"> */}
       <img
         src="svg/blob-2.svg"
