@@ -59,7 +59,7 @@ const Hero = () => {
             {items.map((item, index) => (
               <div
                 key={index}
-                className="w-max md:w-[220px] lg:w-[288px] md:h-[64px] bg-[var(--background)] rounded-lg flex items-center justify-start gap-2 px-2 py-2 md:px-[16px] text-[var(--primary)] font-bold cursor-pointer"
+                className="w-max md:w-[220px] lg:w-[288px] md:h-[64px] bg-[var(--background)] rounded-lg flex items-center justify-start gap-2 px-2 py-2 md:px-[16px] text-[var(--primary)] font-bold cursor-pointer hover:bg-[var(--secondary)] hover:text-white transition-all duration-[var(--duration)]"
               >
                 {item.icon}
                 <p className="text-xs md:text-[16px]">{item.label}</p>
