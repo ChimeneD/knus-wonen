@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./card";
+import { PiArrowRightDuotone } from "react-icons/pi";
 
 const LatestNieuws = () => {
   const items = [
@@ -34,6 +35,12 @@ const LatestNieuws = () => {
             <Card {...item} key={index} />
           ))}
         </div>
+        <article className="flex gap-2 items-center text-[14px] bottom-[12px] justify-end cursor-pointer">
+          <p className="text-[var(--primary)] font-bold">
+            Bekijk alle nieuwsberichten
+          </p>
+          <PiArrowRightDuotone className="text-[var(--secondary)] mt-1" />
+        </article>
       </div>
     </div>
   );

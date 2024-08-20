@@ -12,8 +12,10 @@
   --secondary: #ff6b38;
   --accent: #35bce7;
   --gray: #999999;
-  --gradient-green: #ff6b38;
-  --gradient-orange: #ff6b38;
+  --gradient-green-from: #bfe27d;
+  --gradient-green-to: #35bce7;
+  --gradient-orange-from: #ff6b38;
+  --gradient-orange-to: #ffd201;
   --duration: 0.5s;
 }
 body {
