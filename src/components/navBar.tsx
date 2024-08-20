@@ -74,7 +74,7 @@ const NavBar = () => {
         <ul
           className={`${
             open
-              ? "flex flex-col gap-[12px] text-[var(--primary)] font-bold font-poppins items-center"
+              ? "flex flex-col gap-[12px] text-[var(--primary)] font-bold font-poppins items-center bg-[var(--background)] z-10"
               : "hidden"
           }`}
         >
