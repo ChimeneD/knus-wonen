@@ -2,34 +2,11 @@
 "use client";
 import React, { useState } from "react";
 import { Squeeze as Hamburger } from "hamburger-react";
+import { motion } from "framer-motion";
+import { link_container, link_items } from "@utils/animations/navbar";
+import { nav_icons, nav_menu } from "@utils/constants";
 
 const NavBar = () => {
-  const menu = [
-    {
-      label: "Ik hurr",
-    },
-    {
-      label: "Ik zoek",
-    },
-    {
-      label: "Over ons",
-    },
-    {
-      label: "Projecten",
-    },
-  ];
-
-  const icons = [
-    {
-      src: "svg/search-icon.svg",
-      alt: "search icon",
-    },
-    {
-      src: "svg/user-icon.svg",
-      alt: "user icon",
-    },
-  ];
-
   const [open, setOpen] = useState(false);
   return (
     <div className="flex justify-between items-center h-[80px] lg:px-[143px] md:px-6 px-4">
@@ -38,18 +15,24 @@ const NavBar = () => {
         alt="company-logo"
         className="cursor-pointer w-[50%] md:w-auto"
       />
-      <ul className="hidden md:flex text-[var(--primary)] font-bold gap-[12px] font-poppins items-center">
-        {menu.map((item) => (
-          <li
+      <motion.ul
+        className="hidden md:flex text-[var(--primary)] font-bold gap-[12px] font-poppins items-center"
+        variants={link_container}
+        initial="hidden"
+        animate="show"
+      >
+        {nav_menu.map((item) => (
+          <motion.li
             key={item.label}
             className="cursor-pointer text-[16px] leading-[24px] hover:text-[var(--secondary)] transition-all duration-[var(--duration)]"
+            variants={link_items}
           >
             {item.label}
-          </li>
+          </motion.li>
         ))}
-      </ul>
+      </motion.ul>
       <div className="flex gap-[12px] items-center">
-        {icons.map((icon) => (
+        {nav_icons.map((icon) => (
           <span
             key={icon.alt}
             className="cursor-pointer flex items-center justify-center"
@@ -70,23 +53,29 @@ const NavBar = () => {
           />
         </div>
       </div>
-      <div className="z-20 md:hidden absolute top-[80px] left-0 right-0 w-full transition-all duration-[var(--duration)]">
-        <ul
-          className={`${
-            open
-              ? "h-[30vh] gap-[12px] text-[var(--primary)] py-[12px] "
-              : "h-[0px]"
-          } flex flex-col font-bold font-poppins justify-center items-center bg-[var(--background)] transition-all duration-[var(--duration)] overflow-hidden`}
-        >
-          {menu.map((item) => (
-            <li
-              key={item.label}
-              className="cursor-pointer text-[16px] leading-[24px] hover:text-[var(--secondary)] transition-all duration-[var(--duration)]"
-            >
-              {item.label}
-            </li>
-          ))}
-        </ul>
+      <div
+        className={`z-20 md:hidden absolute top-[80px] left-0 right-0 w-full transition-all duration-[var(--duration)] ${
+          open ? "h-[30vh] gap-[12px]" : "h-[0px]"
+        } overflow-hidden`}
+      >
+        {open && (
+          <motion.ul
+            className={`flex flex-col gap-2 font-bold font-poppins justify-center items-center bg-[var(--background)] transition-all duration-[var(--duration)] py-[12px]`}
+            variants={link_container}
+            initial="hidden"
+            animate="show"
+          >
+            {nav_menu.map((item) => (
+              <motion.li
+                key={item.label}
+                className="text-[var(--primary)] cursor-pointer text-[16px] leading-[24px] hover:text-[var(--secondary)] transition-all duration-[var(--duration)]"
+                variants={link_items}
+              >
+                {item.label}
+              </motion.li>
+            ))}
+          </motion.ul>
+        )}
       </div>
     </div>
   );
