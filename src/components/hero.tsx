@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import { link_container, link_items } from "@utils/animations/hero";
+import { motion } from "framer-motion";
 import React from "react";
 import {
   PiChatsCircleDuotone,
@@ -52,20 +54,30 @@ const Hero = () => {
       />
       <div className="flex flex-col justify-end h-full items-center">
         <article className="z-20 py-2 overflow-x-auto w-full md:w-auto gap-4 flex flex-col px-2 backdrop-blur-lg bg-white/30 md:bg-transparent md:backdrop-blur-none">
-          <p className="text-[var(--primary)] md:text-white text-lg md:text-[24px] leading-[36px] font-poppins ">
+          <motion.p
+            className="text-[var(--primary)] md:text-white text-lg md:text-[24px] leading-[36px] font-poppins"
+            initial={{ opacity: 0, translateY: -1, scale: 0.95 }}
+            whileInView={{ opacity: 1, translateY: 0, scale: 1 }}
+          >
             Waarmee kunnen we je helpen?
-          </p>
-          <div className="flex gap-2">
+          </motion.p>
+          <motion.div
+            className="flex gap-2"
+            initial="hidden"
+            whileInView="show"
+            variants={link_container}
+          >
             {items.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="w-max md:w-[220px] lg:w-[288px] md:h-[64px] bg-[var(--background)] rounded-lg flex items-center justify-start gap-2 px-2 py-2 md:px-[16px] text-[var(--primary)] font-bold cursor-pointer hover:bg-[var(--secondary)] hover:text-white transition-all duration-[var(--duration)]"
+                variants={link_items}
               >
                 {item.icon}
                 <p className="text-xs md:text-[16px]">{item.label}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </article>
       </div>
     </div>
