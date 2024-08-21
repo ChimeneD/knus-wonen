@@ -19,19 +19,20 @@ The website is built in NextJS 14 and styled with TailwindCSS
 ## Getting started
 
 First clone the project by either downloading the zip file: "Code > Download Zip" or running the git command below on a terminal application (CMD, Powershell, Git bash e.t.c..): 
+
+Ensure git is installed in your device before running this command.
 ```bash
   git clone https://github.com/ChimeneD/knus-wonen.git
 ```
-Go to the project directory
+Next unzip the downloaded file and using the terminal, navigate to the unziped/cloned folder.
 ```bash
   cd knus-wonen
 ```
-Ensure git is installed in your device before running this command.
-Next unzip the downloaded file or navigate to the cloned folder and run the command below to install the required packages and dependencies.
+Install packages and dependencies with command:
 ```bash
   npm install
 ```
-Next run the project with the following command: 
+Run the project with the following command: 
 ```bash
   npm run dev
 ```
