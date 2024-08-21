@@ -20,7 +20,7 @@ The website is built in NextJS 14 and styled with TailwindCSS
 
 First clone the project by either downloading the zip file: "Code > Download Zip" or running the git command below on a terminal application (CMD, Powershell, Git bash e.t.c..): 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/ChimeneD/knus-wonen.git
 ```
 Go to the project directory
 ```bash
