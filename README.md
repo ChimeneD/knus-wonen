@@ -42,3 +42,8 @@ and visit the link show after the command is executed, usually http://localhost:
 Demo can be found here:
 https://knus-wonen.vercel.app/
 
+
+### Author
+
+- [Daniel Amadi](https://www.github.com/ChimeneD)
+
